@@ -1,9 +1,22 @@
+# See this script's repository at
+# http://github.com/avar/irssi-bitlbee-facebook-rename for further
+# information.
+
 use strict;
 use warnings;
 use Irssi;
 use Irssi::Irc;
 use Text::Unidecode;
 use Encode qw(decode);
+
+our $VERSION = '0.02';
+our %IRSSI = (
+    authors => do { use utf8; 'Ævar Arnfjörð Bjarmason' },
+    contact => 'avarab@gmail.com',
+    name    => 'facebook-bitlbee-rename',
+    description => 'Rename XMPP chat.facebook.com contacts in bitlbee to human-readable names',
+    license => 'GPL',
+);
 
 my $bitlbeeChannel = "&bitlbee";
 my %nicksToRename = ();
