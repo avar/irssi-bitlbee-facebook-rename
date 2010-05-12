@@ -30,7 +30,7 @@ sub message_join
   if ($host eq 'chat.facebook.com' and $channel =~ m/$bitlbeeChannel/ and $nick =~ m/$username/)
   {
     $nicksToRename{$nick} = $channel;
-    $server->command("whois $nick");
+    $server->command("whois -- $nick");
   }
 }
 
