@@ -27,7 +27,7 @@ sub message_join
   my ($server, $channel, $nick, $address) = @_;
   my ($username, $host) = split /@/, $address;
 
-  if ($host eq 'chat.facebook.com' and $channel =~ m/$bitlbeeChannel/ and $nick =~ m/$username/)
+  if ($host eq 'facebook' and $channel =~ m/$bitlbeeChannel/ and $nick =~ m/$username/)
   {
     $nicksToRename{$nick} = $channel;
     $server->command("whois -- $nick");
